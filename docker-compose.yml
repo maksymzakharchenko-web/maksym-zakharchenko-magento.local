@@ -1,5 +1,5 @@
 # SSL certificates for development
-# $ mkcert -cert-file=maksym-zakharchenko-magento.local+1.pem -key-file=maksym-zakharchenko-magento.local+1-key.pem maksym-zakharchenko-magento.local www.maksym-zakharchenko-magento.local
+# $ mkcert -cert-file=maksym-zakharchenko-magento.local+3.pem -key-file=maksym-zakharchenko-magento.local+3-key.pem maksym-zakharchenko-magento.local www.maksym-zakharchenko-magento.local maksym-zakharchenko-magento.us www.maksym-zakharchenko-magento.ua
 #
 # Start composition:
 # $ docker-compose up -d
@@ -27,13 +27,13 @@ services:
     labels:
       - traefik.enable=true
       # HTTP
-      - traefik.http.routers.maksym-zakharchenko-magento-local-http.rule=Host(`maksym-zakharchenko-magento.local`,`www.maksym-zakharchenko-magento.local`)
+      - traefik.http.routers.maksym-zakharchenko-magento-local-http.rule=Host(`maksym-zakharchenko-magento.local`,`www.maksym-zakharchenko-magento.local`,`maksym-zakharchenko-magento.us`,`www.maksym-zakharchenko-magento.ua`)
       - traefik.http.routers.maksym-zakharchenko-magento-local-http.entrypoints=http
       - traefik.http.routers.maksym-zakharchenko-magento-local-http.service=maksym-zakharchenko-magento-local-http
       - traefik.http.services.maksym-zakharchenko-magento-local-http.loadbalancer.server.port=80
       - traefik.http.services.maksym-zakharchenko-magento-local-http.loadbalancer.server.scheme=http
       # HTTPS
-      - traefik.http.routers.maksym-zakharchenko-magento-local-https.rule=Host(`maksym-zakharchenko-magento.local`,`www.maksym-zakharchenko-magento.local`)
+      - traefik.http.routers.maksym-zakharchenko-magento-local-https.rule=Host(`maksym-zakharchenko-magento.local`,`www.maksym-zakharchenko-magento.local`,`maksym-zakharchenko-magento.us`,`www.maksym-zakharchenko-magento.ua`)
       - traefik.http.routers.maksym-zakharchenko-magento-local-https.entrypoints=https
       - traefik.http.routers.maksym-zakharchenko-magento-local-https.tls=true
       - traefik.http.routers.maksym-zakharchenko-magento-local-https.service=maksym-zakharchenko-magento-local-https
@@ -41,13 +41,13 @@ services:
       - traefik.http.services.maksym-zakharchenko-magento-local-https.loadbalancer.server.scheme=https
     # Must add extra_hosts to be written to /etc/hosts - otherwise containerized application can not curl itself
     extra_hosts:
-      - "maksym-zakharchenko-magento.local www.maksym-zakharchenko-magento.local:127.0.0.1"
+      - "maksym-zakharchenko-magento.local www.maksym-zakharchenko-magento.local maksym-zakharchenko-magento.us www.maksym-zakharchenko-magento.ua:127.0.0.1"
       # Required for xDebug on Linux hosts till docker.host.internal is not available by default - https://github.com/docker/libnetwork/pull/2348/files
       - "host.docker.internal:172.17.0.1"
     links:
 #      - memcached
 #      - redis
-      - elasticsearch
+     - elasticsearch
     external_links:
       - mysql80:mysql
       - mailhog
@@ -101,6 +101,7 @@ services:
 #        hard: -1
 #    restart: always
 #    network_mode: bridge
+
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.9.3
     environment:
