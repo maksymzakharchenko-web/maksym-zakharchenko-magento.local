@@ -18,9 +18,11 @@ class ForwardResponseDemoController implements \Magento\Framework\App\Action\Htt
         $this->forwardFactory = $forwardFactory;
     }
 
+    /**
+     * @return Forward
+     */
     public function execute(): Forward
     {
-
         return $this->forwardFactory->create()
             ->forward('JsonResponseDemoController');
     }

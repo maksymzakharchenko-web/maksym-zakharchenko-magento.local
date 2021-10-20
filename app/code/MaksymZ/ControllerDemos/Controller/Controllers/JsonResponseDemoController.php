@@ -17,7 +17,6 @@ class JsonResponseDemoController implements \Magento\Framework\App\Action\HttpGe
         \Magento\Framework\App\RequestInterface          $request
     ) {
         $this->jsonFactory = $jsonFactory;
-
         $this->request = $request;
     }
 
