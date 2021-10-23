@@ -29,7 +29,7 @@ class RawResponseDemoController implements \Magento\Framework\App\Action\HttpGet
             <body>
                 <div style="border: 1px solid black; padding: 10px;">
                     <h2>Form</h2>
-                        <form method="get" action="https://maksym-zakharchenko-magento.local/maksymz-controller-demos/controllers/jsonresponsedemocontroller" >
+                        <form method="get" action="/maksymz-controller-demos/controllers/jsonresponsedemocontroller" >
                             <label>Vendor name
                                 <input name="vendorName" type="text" value="MaksymZ">
                             </label>
@@ -42,9 +42,9 @@ class RawResponseDemoController implements \Magento\Framework\App\Action\HttpGet
                 <div style="padding: 10px;">
                     <h2>Navigation</h2>
                     <ul>
-                        <li><a href="https://maksym-zakharchenko-magento.local/maksymz-controller-demos/controllers/redirectresponsedemocontroller">Redirect Response Demo</a></li>
-                        <li><a href="https://maksym-zakharchenko-magento.local/maksymz-controller-demos/controllers/jsonresponsedemocontroller">Json Response Demo</a></li>
-                        <li><a href="https://maksym-zakharchenko-magento.local/maksymz-controller-demos/controllers/forwardresponsedemocontroller">Forward Response Demo</a></li>
+                        <li><a href="/maksymz-controller-demos/controllers/redirectresponsedemocontroller" target="_blank">Redirect Response Demo</a></li>
+                        <li><a href="/maksymz-controller-demos/controllers/jsonresponsedemocontroller" target="_blank">Json Response Demo</a></li>
+                        <li><a href="/maksymz-controller-demos/controllers/forwardresponsedemocontroller" target="_blank">Forward Response Demo</a></li>
                     </ul>
                 </div>
             </body>
