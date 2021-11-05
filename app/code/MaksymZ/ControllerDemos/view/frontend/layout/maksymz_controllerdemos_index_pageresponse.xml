@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd"
+      layout="1column"
+>
+    <body>
+        <referenceContainer name="content">
+            <container name="maksymz.controller.demos.container" htmlTag="div" htmlClass="maksymz-layout-debug">
+                <block name="maksymz.controller.demos.text.block"
+                       class="Magento\Framework\View\Element\Text"
+                       before="-"
+                >
+                </block>
+                <block class="Magento\Framework\View\Element\Template"
+                       name="maksymz.controller.demos.text.block.with.template"
+                       template="MaksymZ_ControllerDemos::main_page.phtml"
+                />
+            </container>
+        </referenceContainer>
+    </body>
+</page>

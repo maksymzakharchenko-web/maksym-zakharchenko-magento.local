@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace MaksymZ\ControllerDemos\Controller\Controllers;
+namespace MaksymZ\ControllerDemos\Controller\Index;
 
 use Magento\Framework\Controller\Result\Forward;
 
@@ -24,6 +24,6 @@ class ForwardResponseDemoController implements \Magento\Framework\App\Action\Htt
     public function execute(): Forward
     {
         return $this->forwardFactory->create()
-            ->forward('JsonResponseDemoController');
+            ->forward('FormResponse');
     }
 }

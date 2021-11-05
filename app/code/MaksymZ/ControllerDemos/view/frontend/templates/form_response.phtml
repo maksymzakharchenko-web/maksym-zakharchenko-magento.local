@@ -1,0 +1,10 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+?>
+
+<div>
+    <ul>
+        <li>Vendor name: <?= $block->getRequest()->getParam('vendorName', 'default') ?></li>
+        <li>Module name: <?= $block->getRequest()->getParam('moduleName', 'default') ?></li>
+    </ul>
+</div>
