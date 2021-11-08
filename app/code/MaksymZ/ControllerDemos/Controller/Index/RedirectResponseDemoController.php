@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace MaksymZ\ControllerDemos\Controller\Controllers;
+namespace MaksymZ\ControllerDemos\Controller\Index;
 
 use Magento\Framework\Controller\Result\Redirect;
 

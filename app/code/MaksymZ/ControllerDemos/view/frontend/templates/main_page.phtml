@@ -1,0 +1,25 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+?>
+
+<div style="border: 1px solid black; padding: 10px;">
+    <h2>Form</h2>
+    <form method="get" action="<?= $block->getUrl('maksymz-controller-demos/index/formresponse') ?>">
+        <label>Vendor name
+            <input name="vendorName" type="text" value="maksymz">
+        </label>
+        <label>Module name
+            <input name="moduleName" type="text" value="controllerdemos">
+        </label>
+        <button>Submit</button>
+    </form>
+</div>
+<div style="padding: 10px;">
+    <h2>Navigation</h2>
+    <ul>
+        <li><a href="<?= $block->getUrl('maksymz_controllerdemos/index/redirectresponsedemocontroller') ?>"
+               target="_blank">Redirect Response Demo</a></li>
+        <li><a href="<?= $block->getUrl('maksymz_controllerdemos/index/forwardresponsedemocontroller') ?>">Forward
+                Response Demo</a></li>
+    </ul>
+</div>
