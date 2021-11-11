@@ -3,12 +3,20 @@
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd" layout="2column-left"
 >
     <body>
-        <referenceContainer name="header.container">
+        <referenceContainer name="page.wrapper">
             <block class="Magento\Framework\View\Element\Template"
                    name="maksymz.cms.container.text.block.with.template"
-                   template="MaksymZ_Cms::beforeAllContent.phtml"
+                   template="MaksymZ_Cms::before_all_content_text_block.phtml"
                    before="-"
             />
+        </referenceContainer>
+        <referenceContainer name="columns">
+            <container before="div.sidebar.main">
+                <block class="Magento\Framework\View\Element\Template"
+                       name="maksymz.cms.text.block.with.img.in.left.column"
+                       template="MaksymZ_Cms::left_column_content.phtml"
+                />
+            </container>
         </referenceContainer>
     </body>
 </page>
