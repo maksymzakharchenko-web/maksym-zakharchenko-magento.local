@@ -1,0 +1,13 @@
+<?php
+/**
+ * @var \Magento\Framework\View\Element\Template $block
+ * @var \Magento\Framework\Escaper $escaper
+ * @var \Magento\Framework\View\Helper\SecureHtmlRenderer $secureRenderer
+ */
+?>
+
+<div>
+    <img src="<?= $escaper->escapeHtmlAttr($block->getViewFileUrl('images/adv.jpg')) ?>" alt="adv" width="200"
+         height="100">
+    <h2><?= $escaper->escapeHtml(__('Cool banner')) ?></h2>
+</div>
