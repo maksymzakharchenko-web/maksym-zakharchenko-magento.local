@@ -9,7 +9,7 @@
 <div style="border: 1px solid black; padding: 10px;">
     <h2><?= $escaper->escapeHtml(__('Form')) ?></h2>
     <form method="get"
-          action="<?= $escaper->escapeUrl($block->getUrl('maksymz-controller-demos/index/formresponse')) ?>"
+          action="<?= $escaper->escapeHtmlAttr($block->getUrl('maksymz-controller-demos/index/formresponse')) ?>"
     >
         <div style="margin: 10px;">
             <label>
@@ -41,6 +41,7 @@
             </a>
         </li>
         <li>
+
             <a href="<?= $escaper->escapeHtmlAttr($block->getUrl('maksymz_controllerdemos/index/forwardresponsedemocontroller')) ?>">
                 <?= $escaper->escapeHtml(__('Forward')) ?>
                 <?= $escaper->escapeHtml(__('Response Demo')) ?>

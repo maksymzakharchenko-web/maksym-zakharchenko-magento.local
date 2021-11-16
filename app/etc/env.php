@@ -61,7 +61,7 @@ return [
         'document_root_is_pub' => true
     ],
     'cache_types' => [
-        'config' => 1,
+        'config' => 0,
         'layout' => 1,
         'block_html' => 1,
         'collections' => 1,

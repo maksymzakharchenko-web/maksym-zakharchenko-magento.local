@@ -8,11 +8,7 @@
 
 <div>
     <ul>
-        <li><?= $escaper->escapeHtml(__('Vendor name:')) ?>
-            <?= $escaper->escapeHtmlAttr(__($block->getRequest()->getParam('vendorName', 'default'))) ?>
-        </li>
-        <li><?= $escaper->escapeHtml(__('Module name:')) ?>
-            <?= $escaper->escapeHtmlAttr(__($block->getRequest()->getParam('moduleName', 'default'))) ?>
-        </li>
+        <li><?= $escaper->escapeHtml(__('Vendor name: %1', $block->getRequest()->getParam('vendorName', 'default'))) ?></li>
+        <li><?= $escaper->escapeHtml(__('Module name: %1', $block->getRequest()->getParam('moduleName', 'default'))) ?></li>
     </ul>
 </div>

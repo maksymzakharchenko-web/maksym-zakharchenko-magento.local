@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="product.info.media">
+            <container name="custom.error.container" htmlTag="div" htmlClass="message-error error message">
+                <block class="Magento\Framework\View\Element\Text"
+                       name="maksymz.cms.text.block.without.template"
+                       after="-"
+                >
+                    <action method="setText">
+                        <argument translate="true" name="text" xsi:type="string">This is a demo product. You can add them to cart and place order only to test the Magento capabilities</argument>
+                    </action>
+                </block>
+            </container>
+        </referenceContainer>
+    </body>
+</page>

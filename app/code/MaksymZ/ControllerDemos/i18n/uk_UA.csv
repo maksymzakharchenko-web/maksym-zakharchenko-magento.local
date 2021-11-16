@@ -1,15 +1,15 @@
-"Vendor name:","Ім'я вендору:"
-"Module name:","Ім'я модуля:"
-"Form","Форма"
-"Vendor name","Ім'я вендору:"
-"vendorName","Ім'я вендору:"
-"text","текст"
-"maksymz","maksymz"
-"Module name","Ім'я модуля:"
-"moduleName","Ім'я модуля:"
-"controllerdemos","controllerdemos"
-"Submit","Підтвердити"
-"Navigation","Навігація"
-"Redirect Response Demo","Демонстрація відповіді на переспрямування"
-"Forward","Вперед"
-"Response Demo","Демонстрація відповідей"
+"Vendor name: %1","Имя'я вендору: %1"
+"Module name: %1","Имя'я модуля: %1"
+Form,Форма
+"Vendor name","Имя'я вендору"
+vendorName,vendorName
+text,text
+maksymz,maksymz
+"Module name","Имя'я модуля"
+moduleName,moduleName
+controllerdemos,controllerdemos
+Submit,Підтвердити
+Navigation,Навігація
+"Redirect Response Demo","Redirect Response Demo"
+Forward,Forward
+"Response Demo","Response Demo"

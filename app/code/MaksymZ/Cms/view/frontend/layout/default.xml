@@ -4,19 +4,15 @@
 >
     <body>
         <referenceContainer name="page.wrapper">
-            <block class="Magento\Framework\View\Element\Template"
-                   name="maksymz.cms.container.text.block.with.template"
-                   template="MaksymZ_Cms::before_all_content_text_block.phtml"
-                   before="-"
-            />
-        </referenceContainer>
-        <referenceContainer name="columns">
-            <container before="div.sidebar.main">
-                <block class="Magento\Framework\View\Element\Template"
-                       name="maksymz.cms.text.block.with.img.in.left.column"
-                       template="MaksymZ_Cms::left_column_content.phtml"
-                />
-            </container>
+            <block
+                class="Magento\Cms\Block\BlockByIdentifier"
+                name="maksymz.cms.cms.block"
+                before="-"
+            >
+                <arguments>
+                    <argument translate="true" name="identifier" xsi:type="string">test_cms_block</argument>
+                </arguments>
+            </block>
         </referenceContainer>
     </body>
 </page>

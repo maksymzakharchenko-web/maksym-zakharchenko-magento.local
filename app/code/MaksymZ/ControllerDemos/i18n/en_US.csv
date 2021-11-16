@@ -1,15 +1,15 @@
-"Vendor name:","Vendor name:"
-"Module name:","Module name:"
-"Form","Form"
+"Vendor name: %1","Vendor name: %1"
+"Module name: %1","Module name: %1"
+Form,Form
 "Vendor name","Vendor name"
-"vendorName","vendorName"
-"text","text"
-"maksymz","maksymz"
+vendorName,vendorName
+text,text
+maksymz,maksymz
 "Module name","Module name"
-"moduleName","moduleName"
-"controllerdemos","controllerdemos"
-"Submit","Submit"
-"Navigation","Navigation"
+moduleName,moduleName
+controllerdemos,controllerdemos
+Submit,Submit
+Navigation,Navigation
 "Redirect Response Demo","Redirect Response Demo"
-"Forward","Forward"
+Forward,Forward
 "Response Demo","Response Demo"
