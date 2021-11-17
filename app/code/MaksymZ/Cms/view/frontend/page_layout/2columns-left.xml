@@ -9,20 +9,7 @@
         xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_layout.xsd">
     <referenceContainer name="columns">
         <container name="div.sidebar.main" htmlTag="div" htmlClass="sidebar sidebar-main" after="main">
-            <container htmlTag="div" name="div.sidebar.img.with.text.below">
-                <block class="Magento\Cms\Block\BlockByIdentifier" name="maksymz.cms.img.and.text.block">
-                    <arguments>
-                        <argument name="identifier" xsi:type="string">
-                            test_block_with_image_and_text_in_left_column
-                        </argument>
-                    </arguments>
-                </block>
-            </container>
-            <container name="sidebar.main" as="sidebar_main" label="Sidebar Main"/>
-        </container>
-        <container name="div.sidebar.additional" htmlTag="div" htmlClass="sidebar sidebar-additional"
-                   after="div.sidebar.main">
-            <container name="sidebar.additional" as="sidebar_additional" label="Sidebar Additional"/>
+            <container htmlTag="div" name="div.sidebar.img.with.text.below"/>
         </container>
     </referenceContainer>
 </layout>

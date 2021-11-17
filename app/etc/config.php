@@ -355,6 +355,7 @@ return [
         'Klarna_Onsitemessaging' => 1,
         'Klarna_KpGraphQl' => 1,
         'Mageplaza_Core' => 1,
+        'MaksymZ_Catalog' => 1,
         'MaksymZ_Cms' => 1,
         'MaksymZ_ControllerDemos' => 1,
         'PayPal_Braintree' => 1,
