@@ -1,25 +1,51 @@
 <?php
-/** @var \Magento\Framework\View\Element\Template $block */
+/**
+ * @var \Magento\Framework\View\Element\Template $block
+ * @var \Magento\Framework\Escaper $escaper
+ * @var \Magento\Framework\View\Helper\SecureHtmlRenderer $secureRenderer
+ */
 ?>
 
 <div style="border: 1px solid black; padding: 10px;">
-    <h2>Form</h2>
-    <form method="get" action="<?= $block->getUrl('maksymz-controller-demos/index/formresponse') ?>">
-        <label>Vendor name
-            <input name="vendorName" type="text" value="maksymz">
-        </label>
-        <label>Module name
-            <input name="moduleName" type="text" value="controllerdemos">
-        </label>
-        <button>Submit</button>
+    <h2><?= $escaper->escapeHtml(__('Form')) ?></h2>
+    <form method="get"
+          action="<?= $escaper->escapeHtmlAttr($block->getUrl('maksymz-controller-demos/index/formresponse')) ?>"
+    >
+        <div style="margin: 10px;">
+            <label>
+                <?= $escaper->escapeHtml(__('Vendor name')) ?>
+                <input name="<?= $escaper->escapeHtmlAttr(__('vendorName')) ?>"
+                       type="<?= $escaper->escapeHtmlAttr(__('text')) ?>"
+                       value="<?= $escaper->escapeHtmlAttr(__('maksymz')) ?>"
+                >
+            </label>
+        </div>
+        <div style="margin: 10px;">
+            <label>
+                <?= $escaper->escapeHtml(__('Module name')) ?>
+                <input name="<?= $escaper->escapeHtmlAttr(__('moduleName')) ?>"
+                       type="<?= $escaper->escapeHtmlAttr(__('text')) ?>"
+                       value="<?= $escaper->escapeHtmlAttr(__('controllerdemos')) ?>"
+                >
+            </label>
+        </div>
+        <button><?= $escaper->escapeHtml(__('Submit')) ?></button>
     </form>
 </div>
 <div style="padding: 10px;">
-    <h2>Navigation</h2>
+    <h2><?= $escaper->escapeHtml(__('Navigation')) ?></h2>
     <ul>
-        <li><a href="<?= $block->getUrl('maksymz_controllerdemos/index/redirectresponsedemocontroller') ?>"
-               target="_blank">Redirect Response Demo</a></li>
-        <li><a href="<?= $block->getUrl('maksymz_controllerdemos/index/forwardresponsedemocontroller') ?>">Forward
-                Response Demo</a></li>
+        <li>
+            <a href="<?= $escaper->escapeHtmlAttr($block->getUrl('maksymz_controllerdemos/index/redirectresponsedemocontroller')) ?>"
+               target="_blank"><?= $escaper->escapeHtml(__('Redirect Response Demo')) ?>
+            </a>
+        </li>
+        <li>
+
+            <a href="<?= $escaper->escapeHtmlAttr($block->getUrl('maksymz_controllerdemos/index/forwardresponsedemocontroller')) ?>">
+                <?= $escaper->escapeHtml(__('Forward')) ?>
+                <?= $escaper->escapeHtml(__('Response Demo')) ?>
+            </a>
+        </li>
     </ul>
 </div>

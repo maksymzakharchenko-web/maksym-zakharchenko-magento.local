@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd" layout="2column-left"
+>
+    <body>
+        <referenceContainer name="page.wrapper">
+            <block
+                class="Magento\Cms\Block\BlockByIdentifier"
+                name="maksymz.cms.cms.block"
+                before="-"
+            >
+                <arguments>
+                    <argument translate="true" name="identifier" xsi:type="string">test_cms_block</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+        <referenceContainer name="div.sidebar.img.with.text.below">
+            <block class="Magento\Cms\Block\BlockByIdentifier" name="maksymz.cms.img.and.text.block">
+                <arguments>
+                    <argument name="identifier" xsi:type="string">test_block_with_image_and_text_in_left_column</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
