@@ -1,0 +1,64 @@
+<?php
+/**
+ * @var \MaksymZ\RegularCustomer\Block\Product\View\RegularCustomerRequest $block
+ * @var \Magento\Framework\Escaper $escaper
+ * @var \Magento\Framework\View\Helper\SecureHtmlRenderer $secureRenderer
+ */
+$product = $block->getData('product');
+?>
+
+<div class="maksymz-regular-customer--request">
+    <form class="form"
+          id="maksymz-regular-customer-form"
+          action="<?= $escaper->escapeHtmlAttr($block->getData('request_submit_url')) ?>"
+          method="post"
+    >
+        <fieldset class="fieldset">
+            <legend class="legend">
+                <span><?= $escaper->escapeHtml(__('Regular Customer')) ?></span>
+            </legend>
+            <br/>
+            <div class="field name required">
+                <label class="label" for="name">
+                    <span><?= $escaper->escapeHtml(__('Name')) ?></span>
+                </label>
+                <div class="control">
+                    <input name="name"
+                           title="<?= $escaper->escapeHtmlAttr(__('Name')) ?>"
+                           class="input-text"
+                           type="text"
+                    />
+                </div>
+            </div>
+            <div class="field email required">
+                <label class="label" for="email">
+                    <span><?= $escaper->escapeHtml(__('Email')) ?></span>
+                </label>
+                <div class="control">
+                    <input type="hidden"
+                           name="product_id"
+                           value="<?php
+                           if (!$product) {
+                               echo '10';
+                           } ?>"
+                    />
+                    <input name="email"
+                           title="<?= $escaper->escapeHtmlAttr(__('Email')) ?>"
+                           class="input-text"
+                           type="email"
+                    />
+                </div>
+            </div>
+        </fieldset>
+        <div class="actions-toolbar">
+            <div class="primary">
+                <button type="submit"
+                        title="<?= $escaper->escapeHtmlAttr(__('Send Request')) ?>"
+                        class="action submit primary"
+                >
+                    <span><?= $escaper->escapeHtml(__('Send Request')) ?></span>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

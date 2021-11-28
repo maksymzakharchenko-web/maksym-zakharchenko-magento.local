@@ -6,7 +6,7 @@
 
 return [
     'router' => [
-        'routes' => [
+        'frontend' => [
             'literal' => [
                 'type'    => 'Literal',
                 'options' => [

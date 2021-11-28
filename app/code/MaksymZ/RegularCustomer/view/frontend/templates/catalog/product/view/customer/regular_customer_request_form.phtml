@@ -1,0 +1,49 @@
+<?php
+/**
+ * @var \Magento\Framework\View\Element\Template $block
+ * @var \Magento\Framework\Escaper $escaper
+ * @var \Magento\Framework\View\Helper\SecureHtmlRenderer $secureRenderer
+ */
+?>
+
+<div class="maksymz-regular-customer-request">
+    <form class="form"
+          id="maksymz-regular-customer-form"
+          action="<?= $escaper->escapeHtmlAttr($block->getData('request_submit_url')) ?>"
+          method="post"
+    >
+        <fieldset class="fieldset">
+            <legend class="legend">
+                <?= $block->getBlockHtml('maksymz.regular.customer.form.title') ?>
+            </legend>
+        </fieldset>
+        <?= $block->getBlockHtml('maksymz.regular.customer.cms.form.block') ?>
+        <fieldset class="fieldset">
+            <div class="field name required">
+                <label class="label" for="name">
+                    <span><?= $escaper->escapeHtml(__('Name')) ?></span>
+                </label>
+                <div class="control">
+                    <input name="name"
+                           title="<?= $escaper->escapeHtmlAttr(__('Name')) ?>"
+                           class="input-text"
+                           type="text"
+                    />
+                </div>
+            </div>
+            <div class="field email required">
+                <label class="label" for="email">
+                    <span><?= $escaper->escapeHtml(__('Email')) ?></span>
+                </label>
+                <div class="control">
+                    <input name="email"
+                           title="<?= $escaper->escapeHtmlAttr(__('Email')) ?>"
+                           class="input-text"
+                           type="email"
+                    />
+                </div>
+            </div>
+        </fieldset>
+        <?= $block->getBlockHtml('maksymz.regular.customer.form.action') ?>
+    </form>
+</div>

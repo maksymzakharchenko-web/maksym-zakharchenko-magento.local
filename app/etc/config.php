@@ -358,6 +358,7 @@ return [
         'MaksymZ_Catalog' => 1,
         'MaksymZ_Cms' => 1,
         'MaksymZ_ControllerDemos' => 1,
+        'MaksymZ_RegularCustomer' => 1,
         'PayPal_Braintree' => 1,
         'PayPal_BraintreeGraphQl' => 1,
         'Temando_ShippingRemover' => 1,
