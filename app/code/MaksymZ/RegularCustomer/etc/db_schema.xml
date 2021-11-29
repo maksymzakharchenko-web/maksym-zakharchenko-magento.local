@@ -20,7 +20,7 @@
         <column xsi:type="smallint" name="store_id" padding="5" unsigned="true" nullable="true"
                 comment="Store ID"
         />
-        <column xsi:type="smallint" name="admin_user_id" padding="5" unsigned="true" nullable="true"
+        <column xsi:type="int" name="admin_user_id" padding="5" unsigned="true" nullable="true"
                 comment="Admin user ID"
         />
         <column xsi:type="timestamp" name="created_at" on_update="false" nullable="false" default="CURRENT_TIMESTAMP"
@@ -40,6 +40,9 @@
         </index>
         <index referenceId="MAKSYMZ_REGULAR_CUSTOMER_REQUEST_STORE_ID" indexType="btree">
             <column name="store_id"/>
+        </index>
+        <index referenceId="MAKSYMZ_REGULAR_CUSTOMER_REQUEST_ADMIN_USER_ID" indexType="btree">
+            <column name="admin_user_id"/>
         </index>
         <constraint xsi:type="foreign"
                     referenceId="FK_MAKSYMZ_REGULAR_CSTR_REQUEST_PRD_ID_M2_CAT_PRD_ENTT_ENTT_ID"
@@ -63,6 +66,14 @@
                     column="store_id"
                     referenceTable="store"
                     referenceColumn="store_id"
+                    onDelete="SET NULL"
+        />
+        <constraint xsi:type="foreign"
+                    referenceId="FK_MAKSYMZ_REGULAR_CSTR_REQUEST_ADM_USR_ID_M2_ADM_USR_USR_ID"
+                    table="maksymz_regular_customer_request"
+                    column="admin_user_id"
+                    referenceTable="admin_user"
+                    referenceColumn="user_id"
                     onDelete="SET NULL"
         />
     </table>
