@@ -5,9 +5,9 @@
 >
     <body>
         <referenceContainer name="content">
-            <block class="MaksymZ\RegularCustomer\Block\Product\View\RegularCustomerRequest"
+            <block class="Magento\Framework\View\Element\Template"
                    name="maksymz.regular.customer.form"
-                   template="MaksymZ_RegularCustomer::form.phtml"
+                   template="MaksymZ_RegularCustomer::catalog/product/view/customer/regular_customer_request_form.phtml"
             >
                 <arguments>
                     <argument name="cache_lifetime" xsi:type="number">84600</argument>

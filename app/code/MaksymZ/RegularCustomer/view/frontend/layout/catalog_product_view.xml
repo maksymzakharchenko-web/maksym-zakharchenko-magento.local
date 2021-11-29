@@ -9,8 +9,7 @@
                     class="MaksymZ\RegularCustomer\Block\Product\View\RegularCustomerRequest"
                     name="maksymz.regular.customer.form.block"
                     template="MaksymZ_RegularCustomer::catalog/product/view/customer/regular_customer_request_form.phtml"
-                    before="product.info.details">
-                    >
+                >
                     <arguments>
                         <argument name="cache_lifetime" xsi:type="number">84600</argument>
                         <argument name="request_submit_url"
@@ -23,31 +22,14 @@
                         />
                     </arguments>
                     <block
-                        class="MaksymZ\RegularCustomer\Block\Product\View\RegularCustomerRequest"
+                        class="Magento\Framework\View\Element\Template"
                         name="maksymz.regular.customer.form.title"
                         template="MaksymZ_RegularCustomer::catalog/product/view/customer/regular_customer_request_form_title.phtml"
-                        before="product.info.details">
+                        >
                     </block>
                     <block class="Magento\Cms\Block\BlockByIdentifier" name="maksymz.regular.customer.cms.form.block">
                         <arguments>
                             <argument name="identifier" xsi:type="string">text_between_title_and_form</argument>
-                        </arguments>
-                    </block>
-                    <block
-                        class="MaksymZ\RegularCustomer\Block\Product\View\RegularCustomerRequest"
-                        name="maksymz.regular.customer.form.action"
-                        template="MaksymZ_RegularCustomer::catalog/product/view/customer/regular_customer_request_form_action.phtml"
-                        before="product.info.details">
-                        <arguments>
-                            <argument name="cache_lifetime" xsi:type="number">84600</argument>
-                            <argument name="request_submit_url"
-                                      path="maksymz_regular_customer/index/request"
-                                      xsi:type="url"
-                            />
-                            <argument name="product"
-                                      helper="Magento\Catalog\Helper\Data::getProduct"
-                                      xsi:type="helper"
-                            />
                         </arguments>
                     </block>
                 </block>

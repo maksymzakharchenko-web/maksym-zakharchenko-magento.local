@@ -4,6 +4,8 @@
  * @var \Magento\Framework\Escaper $escaper
  * @var \Magento\Framework\View\Helper\SecureHtmlRenderer $secureRenderer
  */
+/** @var \Magento\Catalog\Model\Product $product */
+$product = $block->getData('product');
 ?>
 
 <div class="maksymz-regular-customer-request">
@@ -44,6 +46,23 @@
                 </div>
             </div>
         </fieldset>
-        <?= $block->getBlockHtml('maksymz.regular.customer.form.action') ?>
+        <div class="actions-toolbar">
+            <div class="primary">
+                <input type="hidden"
+                       name="product_id"
+                    <?php if ($product): ?>
+                        value="<?= $escaper->escapeHtmlAttr((int)$product->getId()) ?>"
+                    <?php else: ?>
+                        value="<?= $escaper->escapeHtmlAttr((int)$block->getData()) ?>"
+                    <?php endif; ?>
+                >
+                <button type="submit"
+                        title="<?= $escaper->escapeHtmlAttr(__('Send Request')) ?>"
+                        class="action submit primary"
+                >
+                    <span><?= $escaper->escapeHtml(__('Send Request')) ?></span>
+                </button>
+            </div>
+        </div>
     </form>
 </div>
