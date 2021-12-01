@@ -48,14 +48,12 @@ $product = $block->getData('product');
         </fieldset>
         <div class="actions-toolbar">
             <div class="primary">
-                <input type="hidden"
-                       name="product_id"
-                    <?php if ($product): ?>
-                        value="<?= $escaper->escapeHtmlAttr((int)$product->getId()) ?>"
-                    <?php else: ?>
-                        value="<?= $escaper->escapeHtmlAttr((int)$block->getData()) ?>"
-                    <?php endif; ?>
-                >
+                <?php if ($product): ?>
+                    <input type="hidden"
+                           name="product_id"
+                           value="<?= $escaper->escapeHtmlAttr((int)$product->getId()) ?>"
+                    >
+                <?php endif; ?>
                 <button type="submit"
                         title="<?= $escaper->escapeHtmlAttr(__('Send Request')) ?>"
                         class="action submit primary"

@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace MaksymZ\RegularCustomer\Controller\Index;
 
-use MaksymZ\RegularCustomer\Model\RegularCustomer;
 use Magento\Framework\App\Request\InvalidRequestException;
 use Magento\Framework\App\RequestInterface;
 use Magento\Framework\Controller\Result\Redirect;
@@ -94,7 +93,7 @@ class Request implements
         $regularCustomerRequest = $this->regularCustomerRequestFactory->create();
 
         try {
-            $regularCustomerRequest->setProductId((int)$this->request->getParam('product_id'))
+            $regularCustomerRequest->setProductId($this->request->getParam('product_id'))
                 ->setName($this->request->getParam('name'))
                 ->setEmail($this->request->getParam('email'))
                 ->setStoreId($this->storeManager->getStore()->getId());

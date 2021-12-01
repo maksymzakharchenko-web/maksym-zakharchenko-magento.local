@@ -6,7 +6,7 @@
     <body>
         <referenceContainer name="content">
             <block class="Magento\Framework\View\Element\Template"
-                   name="maksymz.regular.customer.form"
+                   name="maksymz.regular.customer.formpage"
                    template="MaksymZ_RegularCustomer::catalog/product/view/customer/regular_customer_request_form.phtml"
             >
                 <arguments>
@@ -16,6 +16,17 @@
                               xsi:type="url"
                     />
                 </arguments>
+                <block
+                    class="Magento\Framework\View\Element\Template"
+                    name="maksymz.regular.customer.form.title"
+                    template="MaksymZ_RegularCustomer::catalog/product/view/customer/regular_customer_request_form_title.phtml"
+                >
+                </block>
+                <block class="Magento\Cms\Block\BlockByIdentifier" name="maksymz.regular.customer.cms.form.block">
+                    <arguments>
+                        <argument name="identifier" xsi:type="string">text_between_title_and_form</argument>
+                    </arguments>
+                </block>
             </block>
         </referenceContainer>
     </body>
