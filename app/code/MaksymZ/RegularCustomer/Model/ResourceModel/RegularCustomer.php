@@ -11,6 +11,6 @@ class RegularCustomer extends \Magento\Framework\Model\ResourceModel\Db\Abstract
      */
     protected function _construct(): void
     {
-        $this->_init('maksymz_regular_customer_request', 'regular_customer_request_id');
+        $this->_init('maksymz_regular_customer_request', 'request_id');
     }
 }
