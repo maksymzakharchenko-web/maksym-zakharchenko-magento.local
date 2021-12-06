@@ -3,25 +3,19 @@
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceBlock name="top.links">
-            <referenceBlock name="authorization-link" remove="true"/>
-            <block class="Magento\Framework\View\Element\Html\Link" name="custom-top-link" after="wish-list-link">
+            <block class="MaksymZ\RegularCustomer\Block\TopLink\View\Element\Html\Link" name="custom-top-link">
                 <arguments>
-                    <argument name="label" xsi:type="string" translate="true">My Requests</argument>
                     <argument name="path" xsi:type="string">maksymz_regular_customer/requests/view</argument>
-                </arguments>
-            </block>
-            <block class="Magento\Framework\View\Element\Html\Link\Current"
-                   name="customer-account-navigation-logout-link">
-                <arguments>
-                    <argument name="path" xsi:type="string">customer/account/logout</argument>
-                    <argument name="label" xsi:type="string">Logout</argument>
+                    <argument name="label" xsi:type="string" translate="true">Regular Customer</argument>
+                    <argument name="sortOrder" xsi:type="number">60</argument>
                 </arguments>
             </block>
         </referenceBlock>
         <referenceBlock name="footer_links">
             <block class="Magento\Framework\View\Element\Html\Link\Current" name="custom-footer-link">
                 <arguments>
-                    <argument translate="true" name="label" xsi:type="string">Loyalty program for Regular Customers</argument>
+                    <argument translate="true" name="label" xsi:type="string">Loyalty program for Regular Customers
+                    </argument>
                     <argument name="path" xsi:type="string">maksymz_regular_customer/index/formpage</argument>
                 </arguments>
             </block>

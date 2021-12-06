@@ -11,7 +11,7 @@ use Exception;
 use Magento\Email\Model\Template\Filter;
 
 /**
- * Html parser adapter
+ *Html parser adapter
  */
 class Html extends AbstractAdapter
 {

@@ -8,7 +8,7 @@
 <layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_layout.xsd">
     <referenceContainer name="columns">
-        <referenceContainer name="div.sidebar.main" htmlTag="div" htmlClass="sidebar sidebar-main">
+        <referenceContainer name="div.sidebar.main">
             <container htmlTag="div" name="div.sidebar.img.with.text.below"/>
         </referenceContainer>
     </referenceContainer>
