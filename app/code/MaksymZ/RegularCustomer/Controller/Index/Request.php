@@ -93,17 +93,14 @@ class Request implements
         $regularCustomerRequest = $this->regularCustomerRequestFactory->create();
 
         try {
-            if ($this->request->getParam('product_id')) {
-                $regularCustomerRequest->setProductId((int)$this->request->getParam('product_id'))
-                    ->setName($this->request->getParam('name'))
-                    ->setEmail($this->request->getParam('email'))
-                    ->setStoreId($this->storeManager->getStore()->getId());
-            } else {
-                $regularCustomerRequest
-                    ->setName($this->request->getParam('name'))
-                    ->setEmail($this->request->getParam('email'))
-                    ->setStoreId($this->storeManager->getStore()->getId());
+            if ($productId = (int)$this->request->getParam('product_id')) {
+                $regularCustomerRequest->setProductId($productId);
             }
+
+            $regularCustomerRequest->setName($this->request->getParam('name'))
+                ->setEmail($this->request->getParam('email'))
+                ->setStoreId($this->storeManager->getStore()->getId());
+
             $this->regularCustomerRequestResource->save($regularCustomerRequest);
             $this->messageManager->addSuccessMessage(
                 __('You request for product %1 accepted for review!', $this->request->getParam('productName'))
