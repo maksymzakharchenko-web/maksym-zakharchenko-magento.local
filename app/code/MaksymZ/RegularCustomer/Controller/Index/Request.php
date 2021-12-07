@@ -98,8 +98,12 @@ class Request implements
                     ->setName($this->request->getParam('name'))
                     ->setEmail($this->request->getParam('email'))
                     ->setStoreId($this->storeManager->getStore()->getId());
+            } else {
+                $regularCustomerRequest
+                    ->setName($this->request->getParam('name'))
+                    ->setEmail($this->request->getParam('email'))
+                    ->setStoreId($this->storeManager->getStore()->getId());
             }
-
             $this->regularCustomerRequestResource->save($regularCustomerRequest);
             $this->messageManager->addSuccessMessage(
                 __('You request for product %1 accepted for review!', $this->request->getParam('productName'))

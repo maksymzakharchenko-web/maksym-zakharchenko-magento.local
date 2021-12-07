@@ -4,7 +4,7 @@
 >
     <body>
         <referenceBlock name="customer_account_navigation">
-            <block class="MaksymZ\RegularCustomer\Block\TopLink\View\Element\Html\Link"
+            <block class="Magento\Framework\View\Element\Html\Link\Current"
                    name="customer-account-navigation-regular-customer"
             >
                 <arguments>
