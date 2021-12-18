@@ -16,7 +16,7 @@ return [
         'table_prefix' => 'm2_',
         'connection' => [
             'default' => [
-                'host' => 'localhost',
+                'host' => 'mysql',
                 'dbname' => 'maksymz_dev',
                 'username' => 'maksymz_dev_user',
                 'password' => 'dfj@il-FFz:s345:v3+4@cdfs//sdf',
